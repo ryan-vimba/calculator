@@ -1,0 +1,14 @@
+.solarPanel {
+    width: 154px;
+    height: 55px;
+    margin-left: 32px;
+    background-color: #633810;
+    border-radius: 5px;
+}
+
+.verticalLine {
+    border-right: 1px solid #996c43;
+    height: 55px;
+    margin-left: 38px;
+    display: inline-block;
+}
