@@ -1,9 +1,12 @@
 .screen {
     height: 78px;
-    width: 332px;
+    width: 312px;
     margin-left: 32px;
     margin-top: 36px;
     background-color: #B5B3B3;
     border-radius: 5px;
+    padding: 10px;
     display: inline-block;
+    text-align: right;
+    vertical-align: bottom;
 }
