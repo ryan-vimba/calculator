@@ -1,0 +1,12 @@
+.buttonBoxLeft {
+    width: 224px;
+    height: 350px;
+    margin-left: 32px;
+    margin-top: 20px;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    column-gap: 7px;
+    row-gap: 10px;
+    background-color: white;
+}
