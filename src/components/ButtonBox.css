@@ -1,0 +1,23 @@
+.buttonBox {
+    background-color: #283180;
+    margin-top: 20px;
+    display: inline-grid;
+    row-gap: 10px;
+}
+
+.buttonBox.left {
+    width: 224px;
+    height: 350px;
+    margin-left: 32px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    column-gap: 7px;
+}
+
+.buttonBox.right {
+    width: 70px;
+    height: 350px;
+    margin-left: 40px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+}
