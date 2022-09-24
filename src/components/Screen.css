@@ -1,0 +1,9 @@
+.screen {
+    height: 78px;
+    width: 332px;
+    margin-left: 32px;
+    margin-top: 36px;
+    background-color: #B5B3B3;
+    border-radius: 5px;
+    display: inline-block;
+}
