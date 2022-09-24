@@ -1,0 +1,19 @@
+.red-button {
+    background-color: #812525;
+    color: white;
+    vertical-align: top;
+    text-align: left;
+    font-size: 16pt;
+}
+
+.white-button {
+    background-color: white;
+    color: #283180;
+    vertical-align: top;
+    text-align: left;
+    font-size: 16pt;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 94);
+}
