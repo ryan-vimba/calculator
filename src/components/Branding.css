@@ -1,12 +1,15 @@
-.ti-branding {
-    margin-left: 24px;
+.text {
     color: white;
+    display: inline-block;
+}
+
+.text.ti-branding {
+    margin-left: 24px;
     font-size: 20pt;
 }
 
-.model-label {
+.text.model-label {
     margin-left: 10px;
-    color: white;
     font-size: 32pt;
     vertical-align: middle;
 }

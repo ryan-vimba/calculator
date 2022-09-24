@@ -2,8 +2,8 @@ import './Branding.css';
 
 export const Branding = () => (
     <div>
-        <text className='ti-branding'>Texas Instruments</text>
-        <text className='model-label'>TI-108</text>
+        <div className='text ti-branding'>Texas Instruments</div>
+        <div className='text model-label'>TI-108</div>
     </div>
 );
 
