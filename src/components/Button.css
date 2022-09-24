@@ -1,17 +1,17 @@
 
 button {
-    border: none;
+    border-width: 2px;
     border-radius: 5px;
     padding: 10px;
     vertical-align: top;
     text-align: left;
     font-size: 16pt;
+    box-shadow: 2px 2px 8px #303030;
 }
 
 .red-button {
     background-color: #812525;
     color: white;
-    border: none;
 }
 
 .red-button:hover {
@@ -21,7 +21,6 @@ button {
 .white-button {
     background-color: rgb(255, 255, 255);
     color: #283180;
-    border: none;
 }
 
 .white-button:hover {
