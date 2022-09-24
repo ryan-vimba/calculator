@@ -1,19 +1,29 @@
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    vertical-align: top;
+    text-align: left;
+    font-size: 16pt;
+}
+
 .red-button {
     background-color: #812525;
     color: white;
-    vertical-align: top;
-    text-align: left;
-    font-size: 16pt;
+    border: none;
+}
+
+.red-button:hover {
+    background-color: #b63535;
 }
 
 .white-button {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: #283180;
-    vertical-align: top;
-    text-align: left;
-    font-size: 16pt;
+    border: none;
 }
 
-button:hover {
-    background-color: rgb(255, 255, 94);
+.white-button:hover {
+    background-color: #b5b5b5;
 }
