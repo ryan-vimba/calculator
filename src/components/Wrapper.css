@@ -1,8 +1,9 @@
 .wrapper {
     width: 396px;
     height: 640px;
-    margin: 50px;
+    margin: auto;
+    margin-top: 100px;
     border-radius: 20px;
-    background-color: #283180;
+    background-color: #2331af;
     box-shadow: 2px 2px 8px #303030;
 }

@@ -10,17 +10,17 @@ button {
 }
 
 .red-button {
-    background-color: #812525;
+    background-color: #b02222;
     color: white;
 }
 
 .red-button:hover {
-    background-color: #b63535;
+    background-color: #942b2b;
 }
 
 .white-button {
     background-color: rgb(255, 255, 255);
-    color: #283180;
+    color: #2331af;
 }
 
 .white-button:hover {
