@@ -9,5 +9,5 @@
     display: inline-block;
     text-align: right;
     vertical-align: bottom;
-    box-shadow: 2px 2px 8px #303030;
+    box-shadow: inset 2px 2px 4px 5px rgba(0,0,0,0.3);
 }

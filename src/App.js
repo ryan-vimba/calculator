@@ -31,9 +31,10 @@ function App() {
   var [calc, setCalc] = useState({
     clear_display: false,
     operation: '',
+    op_value: 0,
     prev_display: 0,
     display: '0',
-    saved: 0
+    memory: 0,
   })
 
   const handleButtonPressed = (event) => {
@@ -50,6 +51,12 @@ function App() {
       handleEquals();
     } else if (UNARY_OPERATIONS.includes(button_value)) {
       handleUnaryOperation(button_value);
+    } else if (button_value === 'M+') {
+      handleMemoryAdd();
+    } else if (button_value === 'M-') {
+      handleMemorySubtract();
+    } else if (button_value === 'MRC') {
+      handleMRC();
     }
   };
 
@@ -57,9 +64,10 @@ function App() {
     setCalc({
       clear_display: false,
       operation: '',
-      prev_display: 0,
+      op_value: 0,
       display: '0',
-      saved: 0
+      prev_display: 0,
+      memory: 0,
     });
   }
 
@@ -69,6 +77,7 @@ function App() {
         ...calc,
         clear_display: false,
         display: number,
+        op_value: calc.operation ? number : 0,
       });
       return;
     } 
@@ -78,7 +87,8 @@ function App() {
     }
     setCalc({
       ...calc,
-      display: new_value
+      display: new_value,
+      op_value: calc.operation ? new_value : 0,
     });
   };
 
@@ -138,6 +148,79 @@ function App() {
       display: new_value,
       prev_display: new_value,
     });
+  }
+
+  const handleMemoryAdd = () => {
+    let add_to_memory = Number(calc.display);
+    if (BINARY_OPERATIONS.includes(calc.operation)) {
+      add_to_memory = performBinaryOperation();
+      let new_memory_value = calc.memory + add_to_memory;
+      setCalc({
+        ...calc,
+        operation: '',
+        clear_display: true,
+        display: add_to_memory,
+        prev_display: add_to_memory,
+        memory: new_memory_value,
+      });
+    } else {
+      let new_memory_value = calc.memory + add_to_memory;
+      setCalc({
+        ...calc,
+        operation: '',
+        clear_display: true,
+        display: add_to_memory,
+        memory: new_memory_value,
+      });
+    }
+  }
+
+  const handleMemorySubtract = () => {
+    let sub_from_memory = Number(calc.display);
+    if (BINARY_OPERATIONS.includes(calc.operation)) {
+      sub_from_memory = performBinaryOperation();
+      let new_memory_value = calc.memory - sub_from_memory;
+      setCalc({
+        ...calc,
+        operation: '',
+        clear_display: true,
+        display: sub_from_memory,
+        prev_display: sub_from_memory,
+        memory: new_memory_value,
+      });
+    } else {
+      let new_memory_value = calc.memory - sub_from_memory;
+      setCalc({
+        ...calc,
+        operation: '',
+        clear_display: true,
+        display: sub_from_memory,
+        memory: new_memory_value,
+      });
+    }
+  }
+
+  const handleMRC = () => {
+    let new_display_value = String(calc.memory);
+    let op = calc.operation;
+    if (BINARY_OPERATIONS.includes(op)) {
+      let new_prev_display = performBinaryOperation();
+      setCalc({
+        ...calc,
+        operation: 'MRC',
+        clear_display: true,
+        display: new_display_value,
+        prev_display: new_prev_display,
+      });
+    } else {
+      setCalc({
+        ...calc,
+        operation: 'MRC',
+        clear_display: true,
+        display: new_display_value,
+        memory: op === 'MRC' ? 0 : calc.memory,
+      });
+    }
   }
 
   const performBinaryOperation = () => {
